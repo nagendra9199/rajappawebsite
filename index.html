@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <style>
+            .header{
+                background-color:#01385E;
+                background-size: cover;
+                padding:5px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 100;
+                
+
+            }
+            .logo{
+                background-color: #329F85;
+                width:200px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                margin-left:30px;
+                padding-left:10px;
+                
+                
+
+            
+            }
+            .heading{
+                font-size:19px;
+                color:#ffffff;
+                text-shadow:2px 3px black;
+            }
+            .off-web{
+                color:#ffffff;
+                font-family: sans-serif;
+                font-weight: bold;
+                font-size:15px;
+                padding-bottom: 7px;
+                
+            }
+            .navbar{
+                display:flex;
+                flex-direction: row;
+                margin-right:40px;
+                margin-top: 33px;
+                
+
+            }
+            .nav-items{
+                padding-left:40px;
+                list-style-type: none;
+                
+            }
+            .list{
+                color:#ffffff;
+                text-decoration: none;
+                font-family:Verdana;
+
+            }
+            
+            .content{
+                color:#ffffff;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size:15px;
+                font-weight: normal;
+                padding-left: 180px;
+                padding-top: 190px;
+            }
+            
+            .social-icons {
+                font-size: 24px;
+                position: absolute;
+                top: 35%;
+                left: 95%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+            }
+
+            .social-icons a {
+                margin-right: 10px;
+                color: #e70b0b;
+                text-decoration: none;
+                padding: 5px;
+                background-color: rgba(255, 255, 255, 0.7);
+                border-radius: 50%;
+                margin:10px;
+            }
+            .slideshow-container {
+                max-width: 100%;
+                position: relative;
+                margin: auto;
+            }
+
+            .slide {
+                 display: none;
+            }
+
+            .slide.active {
+                display: block;
+            }
+            .slide{
+                height:100vh;
+                width:100vw;
+            }
+            
+
+            .slide-arrow {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background: transparent;
+                border: none;
+                font-size: 30px;
+                color: white;
+                cursor: pointer;
+                z-index: 2;
+            }
+
+            .prev-arrow {
+                left: 10px;
+            }
+
+            .next-arrow {
+                right: 10px;
+            }
+
+            .bio {
+                color:#01385E;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                text-align: center;
+                font-weight: 700;
+            }
+            .bio-des{
+                text-align: center;
+                font-size: 17px;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+
+            .bio-container{
+                display:flex;
+                justify-content: center;
+                font-size: 17px;
+                width:100vw;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+            .bio-container h1{
+                color: #01385E;
+            }
+
+            .fg1{
+                width:30%;
+            }
+            .fg2{
+                width:30%
+            }
+            .fg3{
+                width:30%
+            }
+
+            .bio-padd{
+                padding-bottom:20px;
+            }
+
+
+
+
+
+
+            
+            
+.flex-container{
+    display:flex;
+    justify-content: space-around;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            .latest-container{
+                background-image: url("FB_IMG_1690632118722 (1).jpg");
+                background-size: cover;
+                height:80vh;
+                width:100vw;
+                
+                
+            }
+            .latest-head{
+                color:#f3f73a;
+                text-align: center;
+                padding-top: 30px;
+                font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                opacity: 0.6;
+            }
+            .image{
+                border-top-left-radius: 8px;
+                border-top-right-radius: 8px;
+                height:30vh;
+                width: 23vw;
+
+                
+                
+            }
+
+
+
+.box{
+        width:23%;
+        float:left;
+        margin:40px 20px;
+        
+        background-color: #fff;
+        padding-bottom:10px;
+        border-radius: 10px;
+        
+        
+        box-shadow: 10px 10px 10px rgba(0,0,0,0.15);
+        
+        
+        
+
+    }
+    .box-container{
+        background-color: #f3f73a;
+        height:100px;
+        display: inline-block;
+        
+    }
+    
+
+    .box_1{
+        
+        
+        border-radius: 10px;
+        
+        width:30vw;
+        box-shadow: 5px 10px 10px #4e4f50;
+        margin:10px;
+        background-color: #ffffff;
+        
+
+    }
+    .recent{
+        display: flex;
+        flex-direction: row;
+        
+    }
+    .box_1 a{
+        
+        color:#fff;
+        background-color: #2196f3;
+        text-decoration: none;
+        padding:10px 15px;
+        border-radius: 8px;
+        margin-left:250px;
+        height:30px;
+    }
+    .box_1 p{
+        font-size: 15px;
+        line-height: 20px;
+        height: 90px;
+        overflow: hidden;
+        margin-left: 10px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    }
+    .box_1.showContent p{
+        height: 100px;
+        overflow-y: scroll;
+        
+
+
+    }
+    .image_1{
+        height:136px;
+        margin-top:20px ;
+        margin-left:20px;
+    }
+    .box_1 h4{
+        margin-top: 20px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .box_1 a:hover{
+        box-shadow:0 5px 5px rgba(0,0,0,0.2)
+
+    }
+    .box h4{
+        margin-bottom: 10px;
+    }
+    .box p{
+        font-size: 15px;
+        line-height: 28px;
+        height: 90px;
+        overflow: hidden;
+
+    }
+
+    .box a{
+        display:inline-block;
+        color:#fff;
+        background-color: #2196f3;
+        text-decoration: none;
+        padding:10px 15px;
+        border-radius: 8px;
+        margin-top:15px;
+    }
+
+    .box a:hover{
+        box-shadow:0 5px 5px rgba(0,0,0,0.2)
+
+    }
+
+    .box.showContent p{
+        height: 200px;
+        overflow-y: scroll;
+
+
+    }
+    .box.showContent a.readmore-btn{
+        background-color: red;
+
+    }
+    img{
+        width:100%;
+        
+        margin-bottom: 10px;
+
+
+    }
+    .space{
+        height:100px;
+    }
+    .flex-center{
+        display: flex;
+        justify-content: center;
+        
+    }
+    
+
+           
+
+
+
+
+
+
+
+    .high{
+        height:390px;
+        background-color: #EEE9E9;
+        width:100vw;
+        
+        
+    }
+    .recent-flex{
+        display: flex;
+   
+    }
+    .recent-head{
+        font-weight:500;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .recent-container{
+        background-color:#EEE9E9;
+        display: inline-block;
+        width:100vw;
+    }
+
+
+        </style>
+    </head>
+    <body>
+        <div class="hero">
+
+
+            <div class="header">
+
+                <div class="logo">
+                    <h1 class="heading">N.CHINARAJAPPA</h1>
+                    <p class="off-web">O F F I C I A L  W E B S I T E</p>
+
+
+                </div>
+                <div class="nav">
+                    <ul class="navbar">
+                        <li class="nav-items"><a href="#homeContainer" class="list">Home</a></li>
+                        <li class="nav-items"><a href="#bioContainer" class="list">Biography</a></li>
+                        <li class="nav-items"><a href="#latestContainer" class="list">latest Activities</a></li>
+                        <li class="nav-items"><a href="#" class="list">Gallery</a></li>
+                        <li class="nav-items"><a href="#" class="list">Social Media</a></li>
+
+                    </ul>
+
+
+                </div>
+            </div>
+            <div class="main-container" id="homeContainer">                  
+                  
+                
+                <div class="slideshow-container">
+                    <button class="slide-arrow prev-arrow">&#10094;</button>
+                    <img class="slide" src="Desktop - 8.jpg" alt="Slide 1">
+                    <button class="slide-arrow next-arrow">&#10095;</button>
+                    <img class="slide" src="Desktop - 4 (1).jpg" alt="Slide 2">
+                    <button class="slide-arrow prev-arrow">&#10094;</button>
+                    <img class="slide" src="Desktop - 4 (1).jpg" alt="Slide 3">
+                  
+                    
+                  </div>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/yourpage" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.twitter.com/yourpage" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/yourpage" target="_blank"><i class="fab fa-instagram"></i></a>
+                  </div>
+                  
+
+
+                <div class="bio-padd">
+                <div id="bioContainer">
+
+                    <h1 class="bio">BIOGRAPHY</h1>
+                    <p class="bio-des">Nimmakayala Chinarajappa is an Indian politician. He served as the Deputy Chief Minister and Home Minister of Andhra Pradesh from 2014 to 2019. He is currently an MLA of Telugu Desam Party, representing Peddapuram assembly constituency in the Andhra Pradesh Legislative Assembly.</p>
+                    
+                </div>
+
+                <diV class="bio-container">
+
+                    <div class="fg1">
+
+                        <div>
+                            <h1>Birth</h1>
+                            <p>1 October 1953 (age 69)
+                                Amalapuram, East Godavari District</p>
+                        </div>
+                        <div>
+                            <h1>Education</h1>
+                            <p>Chinarajappa hails from Kakinada district. He is a resident of Vijayawada. He completed his post-graduation in Master of Arts.</p>
+                        </div>
+
+                    </div>
+                    <div class="fg2">
+                        <img src="1517285382705-removebg-preview.png"/>
+                    </div>
+                    <div class="fg3">
+                        <div>
+                            <h1>Home minister</h1>
+                            <p>Nimmakayala Chinarajappa is an Indian politician. He served as the Deputy Chief Minister and Home Minister of Andhra Pradesh from 2014 to 2019. He is currently an MLA of Telugu Desam Party, representing Peddapuram assembly constituency in the Andhra Pradesh Legislative Assembly.</p>
+                        </div>
+                        <h1>Minister</h1>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+  <div class="latest-container" id="latestContainer">
+    <div class="latest-head">
+      <h1>LATEST ACTIVITIES</h1>
+      <p>It is a long established fact that a leader will be distracted by the readable content of a page when looking at its layout</p>
+    </div>
+    <div class="space"></div>
+    
+
+    <div class="flex-center">
+    <div class="box">
+        <img src="FB_IMG_1690623093406.jpg" class="image" />
+        <div class="box-container">
+        <h4>Rajappa Gaaru</h4>
+        <p>It is a long establise readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the </p>
+        <a href="javascript:void();" class="readmore-btn">Read More</a>
+    </div>
+        
+    
+    </div>
+    <div class="box">
+        <img src="06-VJ-CHINARAJAPPA (1).jpg" class="image" />
+        <h4>Rajappa Garu</h4>
+        <p>It is a long establise readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the </p>
+        <a href="javascript:void();" class="readmore-btn">Read More</a>
+    
+    </div>
+    <div class="box">
+        <img src="06-VJ-CHINARAJAPPA (1).jpg" class="image" />
+        <h4>Rajappa Gaaru</h4>
+        <p>It is a long establise readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the </p>
+        <a href="javascript:void();" class="readmore-btn">Read More</a>
+    
+    </div>
+</div>
+      </div>
+
+
+
+     
+        
+    </div>
+    <div class="high"></div>
+    <div class="recent-container">
+        <h1 class="recent-head">Recent Activities</h1>
+        <div class="recent-flex">
+            <div class="box_1">
+                <div class="recent">
+                <img src="FB_IMG_1690623093406.jpg" class="image_1" />
+                <div>
+                <h4>Rajappa Gaaru</h4>
+                <p>It is a long establise readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layout </p>
+            </div>
+            
+        </div>
+            
+                <a href="javascript:void();" class="readmore-btn">Read More</a>
+            
+                
+            
+            </div>
+
+            <div class="box_1">
+                <div class="recent">
+                <img src="FB_IMG_1690623093406.jpg" class="image_1" />
+                <div>
+                <h4>Rajappa Gaaru</h4>
+                <p>It is a long establise readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layout </p>
+            </div>
+            
+        </div>
+            
+                <a href="javascript:void();" class="readmore-btn">Read More</a>
+            
+                
+            
+            </div>
+
+
+            <div class="box_1">
+                <div class="recent">
+                <img src="FB_IMG_1690623093406.jpg" class="image_1" />
+                <div>
+                <h4>Rajappa Gaaru</h4>
+                <p>It is a long establise readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layout </p>
+            </div>
+            
+        </div>
+            
+                <a href="javascript:void();" class="readmore-btn">Read More</a>
+            
+                
+            
+            </div>
+        </div>
+    </div>
+    </div>
+    
+   
+
+
+
+
+                
+
+
+
+              <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>        
+                  <script>
+                    $(document).ready(function () {
+                      let currentIndex = 0;
+                      const slides = $(".slide");
+                      const prevArrow = $(".prev-arrow");
+                      const nextArrow = $(".next-arrow");
+                  
+                      function showSlide(index) {
+                        slides.removeClass("active");
+                        slides.eq(index).addClass("active");
+                      }
+                  
+                      function nextSlide() {
+                        currentIndex = (currentIndex + 1) % slides.length;
+                        showSlide(currentIndex);
+                      }
+                  
+                      function prevSlide() {
+                        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                        showSlide(currentIndex);
+                      }
+                
+                      showSlide(currentIndex);
+                  
+                      nextArrow.click(nextSlide);
+                      prevArrow.click(prevSlide);
+                  
+                      setInterval(nextSlide, 5000);
+                    });
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                
+            
+            
+                $(document).ready(function () {
+                  let currentIndex = 0;
+                  const slides = $(".slide");
+                  const prevArrow = $(".prev-arrow");
+                  const nextArrow = $(".next-arrow");
+              
+                  function showSlide(index) {
+                    slides.removeClass("active");
+                    slides.eq(index).addClass("active");
+                  }
+              
+                  function nextSlide() {
+                    currentIndex = (currentIndex + 1) % slides.length;
+                    showSlide(currentIndex);
+                  }
+              
+                  function prevSlide() {
+                    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                    showSlide(currentIndex);
+                  }
+              
+                  showSlide(currentIndex);
+              
+                  nextArrow.click(nextSlide);
+                  prevArrow.click(prevSlide);
+              
+                  setInterval(nextSlide, 3000);
+                });
+
+
+
+
+
+                document.addEventListener("DOMContentLoaded", function() {
+  var readMoreButtons = document.querySelectorAll(".read-more");
+
+  readMoreButtons.forEach(function(button) {
+    button.addEventListener("click", function() {
+      var content = this.parentElement;
+      content.classList.toggle("expanded");
+
+      if (content.classList.contains("expanded")) {
+        this.textContent = "Read Less";
+      } else {
+        this.textContent = "Read More";
+      }
+    });
+  });
+});
+
+
+              </script>
+              
+
+
+
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js">
+
+              </script>
+              
+              <script>
+                  $(".readmore-btn").on('click',function(){
+                      $(this).parent().toggleClass("showContent");
+                      
+                      var replaceText=$(this).parent().hasClass("showContent") ? "Read Less" : "Read More";
+                      $(this).text(replaceText);
+              
+                  });
+              
+              </script>
+
+              
+          </body>
+          </html>
