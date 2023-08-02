@@ -13,7 +13,7 @@
                 position: fixed;
                 top: 0;
                 left: 0;
-                width: 100%;
+                width: 100vw;
                 z-index: 100;
                 height:100px
                 
@@ -109,7 +109,7 @@
             }
             .slide{
                 height:880px;
-                width:100vw;
+                width:100%;
                 padding-top:90px;
             }
             
@@ -150,7 +150,7 @@
                 display:flex;
                 justify-content: center;
                 font-size: 17px;
-                width:100vw;
+                width:100%;
                 font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             }
             .bio-container h1{
@@ -197,13 +197,25 @@
 
 
             .latest-container{
-                background-image: url("images\latest new.jpg");
+                background-image: url("latest new.jpg");
                 background-size: cover;
-                height:80vh;
-                width:100vw;
+                width: 100%;
+                height: 50vh;
                 
+    
                 
-                
+            }
+
+            @media screen and (max-width:980px){
+                .latest-container{
+                    height: 25vh;
+                }
+            }
+            .container-latest{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
             }
             .latest-head{
                 color:#f4f4f7;
@@ -217,7 +229,7 @@
                 border-top-left-radius: 8px;
                 border-top-right-radius: 8px;
                 height:30vh;
-                width: 23vw;
+                width: 23%;
 
                 
                 
@@ -253,14 +265,21 @@
         
         border-radius: 10px;
         
-        width:28vw;
+        width:28%;
         box-shadow: 5px 10px 10px #4e4f50;
         margin:10px;
         background-color: #ffffff;
         
 
     }
-    .recent{
+    @media screen and (max-width:980px){
+        .box_1{
+            width:40%;
+        }
+    }
+
+
+        .recent{
         display: flex;
         flex-direction: row;
         
@@ -272,37 +291,37 @@
         text-decoration: none;
         padding:10px 15px;
         border-radius: 8px;
-        margin-left:250px;
-        height:30px;
+        margin-right:10px;
+        height:30vh;
     }
     .box_1 p{
         font-size: 15px;
-        line-height: 20px;
-        height: 90px;
+        line-height: 15px;
+        height: 9vh;
         overflow: hidden;
         text-align: justify;
-        margin-left: 10px;
-        padding: 10px;
+        margin-left: 1%;
+        padding: 1%;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
     }
     .box_1.showContent p{
-        height: 100px;
+        height: 10vh;
         overflow-y: scroll;
         
 
 
     }
     .image_1{
-        height:80px;
-        margin-top:20px ;
-        margin-left:20px;
-        width:120px;
+        height:8vh;
+        margin-top:2vh ;
+        margin-left:2vh;
+        width:12vw;
     }
     .box_1 h4{
-        margin-top: 20px;
-        margin-bottom: 10px;
-        margin-left: 10px;
+        margin-top: 2vh;
+        margin-bottom: 1vh;
+        margin-left: 1vh;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
     .box_1 a:hover{
@@ -319,7 +338,7 @@
     .box p{
         font-size: 15px;
         line-height:px;
-        height: 90px;
+        height: 9vh;
         overflow: hidden;
         padding: 10px;
         text-align: justify;
@@ -574,7 +593,7 @@
 
 
 .social-container{
-    background-image: url("images\social media pic.jpg");
+    background-image: url("social media pic.jpg");
     background-size: cover;
     height:25vw
 }
@@ -729,13 +748,6 @@
   font-style:normal;
 }
 
-    .container-latest{
-        width:100vw;
-        display:flex;
-        justify-content:space-around;
-        flex-wrap:wrap;
-        padding:40px 20px;
-}
     
 .card{
   display:flex;
@@ -827,11 +839,11 @@
                 
                 <div class="slideshow-container">
                     <button class="slide-arrow prev-arrow">&#10094;</button>
-                    <img class="slide" src="images\n.jpg" alt="Slide 1">
+                    <img class="slide" src="n.jpg" alt="Slide 1">
                     <button class="slide-arrow next-arrow">&#10095;</button>
-                    <img class="slide" src="images\DSC_0613.jpg" alt="Slide 2">
+                    <img class="slide" src="DSC_0613.jpg" alt="Slide 2">
                     <button class="slide-arrow prev-arrow">&#10094;</button>
-                    <img class="slide" src="images\2 slider3.jpg" alt="Slide 3">
+                    <img class="slide" src="2 slider3.jpg" alt="Slide 3">
                   
                     
                   </div>
@@ -885,7 +897,7 @@
 
                     </div>
                     <div class="fg2">
-                        <img src="images\1517285382705-removebg-preview.png"/>
+                        <img src="1517285382705-removebg-preview.png"/>
                     </div>
                     <div class="fg3">
                         <div>
@@ -919,7 +931,7 @@
     <div class="container-latest">
         <div class="card">
           <div class="card-image">
-            <img src="images\FB_IMG_1690623093406.jpg">
+            <img src="FB_IMG_1690623093406.jpg">
           </div>
           <div class="card-text">
             
@@ -937,7 +949,7 @@
         
         <div class="card">
             <div class="card-image">
-              <img src="images\Rajappa Garu_1.jpg">
+              <img src="Rajappa Garu_1.jpg">
             </div>
             <div class="card-text">
               
@@ -953,7 +965,7 @@
           </div>
           <div class="card">
             <div class="card-image">
-              <img src="images\WhatsApp Image 2023-07-28 at 10.03.05 AM (1).jpeg">
+              <img src="WhatsApp Image 2023-07-28 at 10.03.05 AM (1).jpeg">
             </div>
             <div class="card-text">
               
@@ -976,12 +988,15 @@
         
     </div>
     <div class="high"></div>
+
     <div class="recent-container">
+
         <h1 class="recent-head">Recent Activities</h1>
+        
         <div class="recent-flex">
             <div class="box_1">
                 <div class="recent">
-                <img src="images\136749766_496174774700420_1644050917513166079_n.jpg" class="image_1" />
+                <img src="136749766_496174774700420_1644050917513166079_n.jpg" class="image_1" />
                 <div>
                 <h4>Rajappa Gaaru</h4>
                 <p>It is a long establise readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layout </p>
@@ -994,16 +1009,17 @@
                 
             
             </div>
+            
 
             <div class="box_1">
                 <div class="recent">
-                <img src="images\800px-thumbnail.jpg" class="image_1"/>
-                <div>
-                <h4>Rajappa Gaaru</h4>
-                <p>It is a long establise readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layout </p>
-            </div>
+                <img src="800px-thumbnail.jpg" class="image_1"/>
+                    <div>
+                         <h4>Rajappa Gaaru</h4>
+                         <p>It is a long establise readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layout </p>
+                     </div>
             
-        </div>
+                </div>
             
                 <a href="javascript:void();" class="readmore-btn">Read More</a>
             
@@ -1014,7 +1030,7 @@
 
             <div class="box_1">
                 <div class="recent">
-                <img src="images\dc-Cover-5labqo4vq8014i14i34anv2eg5-20160505063829.Medi.jpeg" class="image_1" />
+                <img src="dc-Cover-5labqo4vq8014i14i34anv2eg5-20160505063829.Medi.jpeg" class="image_1" />
                 <div>
                 <h4>Rajappa Gaaru</h4>
                 <p>It is a long establise readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layoutIt is a long established fact that a leader will be distracted by the readable content of a page when looking at its layout </p>
@@ -1027,7 +1043,10 @@
                 
             
             </div>
+
+
         </div>
+        
         
     </div>
     <div id="galleryContainer">
@@ -1051,7 +1070,7 @@
                 
                     <div class="container-box">
                         <div class="imgBox">
-                            <img src="images\06-VJ-CHINARAJAPPA (1).jpg" width=400px alt="">
+                            <img src="06-VJ-CHINARAJAPPA (1).jpg" width=400px alt="">
                         </div>
                         <div class="content">
                             <h2>Rajanath Singh</br>
@@ -1061,7 +1080,7 @@
                     
                         <div class="container-box">
                             <div class="imgBox">
-                                <img src="images\800px-thumbnail.jpg" width=400px alt="">
+                                <img src="800px-thumbnail.jpg" width=400px alt="">
                             </div>
                             <div class="content">
                                 <h2>Rajanath Singh</br>
@@ -1073,7 +1092,7 @@
         <div class="container">
             <div class="container-box">
                 <div class="imgBox">
-                    <img src="images\6189_rajjappa.jpg" width=400px alt="">
+                    <img src="6189_rajjappa.jpg" width=400px alt="">
                 </div>
                 <div class="content">
                     <h2>Rajanath Singh</br>
@@ -1084,7 +1103,7 @@
             
                 <div class="container-box">
                     <div class="imgBox">
-                        <img src="images\6942_Deputy-CM-Chinarajappa-addr.jpg" width=400px alt="">
+                        <img src="6942_Deputy-CM-Chinarajappa-addr.jpg" width=400px alt="">
                     </div>
                     <div class="content">
                         <h2>Rajanath Singh</br>
@@ -1095,7 +1114,7 @@
                 
                     <div class="container-box">
                         <div class="imgBox">
-                            <img src="images\7500_Deputy CM Chinarajappa.jpg" width=400px alt="">
+                            <img src="7500_Deputy CM Chinarajappa.jpg" width=400px alt="">
                         </div>
                         <div class="content">
                             <h2>Rajanath Singh</br>
@@ -1108,7 +1127,7 @@
         <div class="container">
             <div class="container-box">
                 <div class="imgBox">
-                    <img src="images\48371464_2315959675103700_6963257424182509568_o.jpg" width=400px alt="">
+                    <img src="48371464_2315959675103700_6963257424182509568_o.jpg" width=400px alt="">
                 </div>
                 <div class="content">
                     <h2>Rajanath Singh</br>
@@ -1118,7 +1137,7 @@
             
                 <div class="container-box">
                     <div class="imgBox">
-                        <img src="images\55961811_2485787354787597_1760917706388799488_o.jpg" width=400px alt="">
+                        <img src="55961811_2485787354787597_1760917706388799488_o.jpg" width=400px alt="">
                     </div>
                     <div class="content">
                         <h2>Rajanath Singh</br>
@@ -1128,7 +1147,7 @@
                 
                     <div class="container-box">
                         <div class="imgBox">
-                            <img src="images\china_rajappa_6169.jpg" width=400px alt="">
+                            <img src="china_rajappa_6169.jpg" width=400px alt="">
                         </div>
                         <div class="content">
                             <h2>Rajanath Singh</br>
@@ -1136,12 +1155,7 @@
                         </div>
                     </div>
                 </div>
-                <div>
-                    <img src="images\dc-Cover-5labqo4vq8014i14i34anv2eg5-20160505063829.Medi.jpeg" class="gallery-image4"/>
-                    <img src="images\DY_CM_7_9366.jpg" class="gallery-image4"/>
-                    <img src="images\FB_IMG_1690623093406.jpg" class="gallery-image4"/>
-                    <img src="images\FB_IMG_1690632118722 (1).jpg" class="gallery-image4"/>
-                </div>
+                
             </div>
 
 
@@ -1157,7 +1171,7 @@
                     </div>
                         <div class="twitter-icon">
                             <div>
-                            <img src="images\twitter.jpg" class="twitter-img"/>
+                            <img src="twitter.jpg" class="twitter-img"/>
                             
                             
                         </div>
@@ -1181,7 +1195,7 @@
                             </div>
                             <div class="twitter-container">
                                 <div class="fb-url">
-                                    <a href="https://twitter.com/ChinarajappaN?t=MXxjJP-4yD2hBcy77eIGZw&s=08" target="_blank"><image src="images\twitter.jpg" class="twitter-logo"/></a>
+                                    <a href="https://twitter.com/ChinarajappaN?t=MXxjJP-4yD2hBcy77eIGZw&s=08" target="_blank"><image src="twitter.jpg" class="twitter-logo"/></a>
                                     <a href="https://twitter.com/ChinarajappaN?t=MXxjJP-4yD2hBcy77eIGZw&s=08" class="icon-link">View Posts on Twitter</a>
                                 </div>
                             </div>
