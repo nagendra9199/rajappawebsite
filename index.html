@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <style>
             .header{
-                background-color:#Da627D;
+                background-color:#ffffff;
                 background-size: cover;
                 padding:5px;
                 display: flex;
@@ -33,11 +33,11 @@
             }
             .heading{
                 font-size:19px;
-                color:#f5f2f2;
-                text-shadow:2px 3px black;
+                color:#0f0f0f;
+                text-shadow: 1px 1px #9ab7cc;
             }
             .off-web{
-                color:#ffffff;
+                color:#0e0d0d;
                 font-family: sans-serif;
                 font-weight: bold;
                 font-size:15px;
@@ -58,10 +58,14 @@
                 
             }
             .list{
-                color:#ffffff;
+                color:#161313;
                 text-decoration: none;
-                font-family:Verdana;
+                font-weight: bold;
+                font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
+            }
+            .list:hover{
+                text-decoration: overline;
             }
             
             .content{
@@ -96,8 +100,13 @@
             }
             .slideshow-container {
                 max-width: 100%;
-                position: relative;
-                margin: auto;
+                padding-bottom:100px;
+                
+            }
+            @media screen and(max-width:980px){
+                .slideshow-container{
+                    
+                }
             }
 
             .slide {
@@ -139,9 +148,13 @@
                 font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
                 text-align: center;
                 font-weight: 700;
+                padding-top:2%;
+                padding-bottom: 2%;
             }
             .bio-des{
                 text-align: center;
+                padding-left: 2%;
+                padding-right: 2%;
                 font-size: 17px;
                 font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             }
@@ -160,8 +173,14 @@
             .fg1{
                 width:30%;
             }
+            @media screen and(min-width:980px){
+                .fg2{
+                    padding-top: 10%;
+                }
+            }
             .fg2{
-                width:30%
+                width:30%;
+                
             }
             .fg3{
                 width:30%
@@ -197,7 +216,7 @@
 
 
             .latest-container{
-                background-image: url("https://github.com/nagendra9199/rajappawebsite/blob/main/images/latest%20new.jpg");
+                background-image: url("images/latest new.jpg");
                 background-size: cover;
                 width: 100%;
                 height: 50vh;
@@ -216,6 +235,7 @@
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
+                justify-content: center;
             }
             .latest-head{
                 color:#f4f4f7;
@@ -593,7 +613,7 @@
 
 
 .social-container{
-    background-image: url("https://github.com/nagendra9199/rajappawebsite/blob/main/images/social%media%pic.jpg");
+    background-image: url("images/social media pic.jpg");
     background-size: cover;
     height:25vw
 }
@@ -658,7 +678,7 @@
     padding-top:50px;
 }
 .twitter-img{
-    height:40px;
+    height:50px;
     width:40px;
     padding-top:10px;
     padding-left:2px;
@@ -706,6 +726,8 @@
     height:70px;
     width:70px;
 }
+
+
 
 
 
@@ -778,7 +800,7 @@
   height:200px;
   text-align: justify;
   width:250px;
-  background-color:#f3f2f7;
+  background-color:#ffffff;
   color:#0f0f0f;
   padding:20px;
   overflow-y: scroll;
@@ -807,17 +829,111 @@
 
 
 
+
+
+
+
+
+
+.rajappa-new{
+    max-width: 350px;
+      max-height: 650px;
+}
+.animation-container {
+        width: 100%;
+      height: 100%;
+      background-color: white;
+      display: flex;
+      
+      align-items: center;
+      overflow: hidden;
+    }
+    .rajappa-new {
+      opacity: 0;
+      position: relative;
+      bottom: -100px;
+      animation: slideInAndFade 1s forwards;
+    }
+    @keyframes slideInAndFade {
+      to {
+        opacity: 1;
+        bottom: 0;
+      }
+    }
+    .quote-container {
+      display: none;
+      position: absolute;
+      
+      transform: translateX(-50%);
+      text-align: center;
+      
+      color: #333;
+      left:60%;
+      align-self: center;
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 40px;
+      font-weight: bolder;
+      text-shadow: 2px 4px  rgb(255, 239, 18);
+      
+
+      animation: fadeInQuote 1s forwards;
+    }
+    @keyframes fadeInQuote {
+      to {
+        opacity: 1;
+      }
+    }
+    .show-quote {
+      display: block;
+    }
+
+
+
+
+    .logo{
+        display: flex;
+
+    }
+    .logo img{
+        margin-right:10px;
+        width: 60px;
+        border-radius:50%;
+        box-shadow:  0px 0px 5px 5px yellow;
+    }
+    
+
+
         </style>
+
+
+
+
     </head>
     <body>
+
+
+
+
+
+        
+
+
+
+
+
+
+
         <div class="hero">
 
 
             <div class="header">
 
                 <div class="logo">
-                    <h1 class="heading">N.CHINARAJAPPA</h1>
-                    <p class="off-web">O F F I C I A L  W E B S I T E</p>
+                    <img src="images\1517285382705-removebg-preview.png">
+                    <h1 class="heading">CHINARAJAPPA
+                        NIMMAKAYALA
+                    </h1>
+                    
 
                     
                 </div>
@@ -838,21 +954,13 @@
                   
                 
                 <div class="slideshow-container">
-                    <button class="slide-arrow prev-arrow">&#10094;</button>
-                    <img class="slide" src="images\n.jpg" alt="Slide 1">
-                    <button class="slide-arrow next-arrow">&#10095;</button>
-                    <img class="slide" src="images\DSC_0613.jpg" alt="Slide 2">
-                    <button class="slide-arrow prev-arrow">&#10094;</button>
-                    <img class="slide" src="" alt="Slide 3">
-                  
-                    
+                    <div class="animation-container">
+                  <img src="images\Rajappa_Garu_2-removebg-preview.png" class="rajappa-new " />
+                  <div class="quote-container" id="quote1"> A Remarkable Journey of Dedication and Leadership </div>
+                </div>
                   </div>
                 </div>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/people/China-Rajappa-Nimmakayala/100050506418754/" target="_blank"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.twitter.com/yourpage" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.instagram.com/yourpage" target="_blank"><i class="fab fa-instagram"></i></a>
-                  </div>
+                
                   
 
 
@@ -1211,7 +1319,19 @@
                 
     </div>
     
-   
+    <script>
+    
+        const image = document.querySelector(".rajappa-new");
+        const quotes = document.querySelectorAll(".quote-container");
+        
+        image.addEventListener("animationend", function() {
+          quotes.forEach((quote, index) => {
+            setTimeout(() => {
+              quote.classList.add("show-quote");
+            }, index * 2000);
+          });
+        });
+      </script>
 
 
 
